@@ -24,7 +24,7 @@ components.html(
 )
 
 # Streamlit page configuration
-st.set_page_config(page_title="Ikeja Electric Fault Clearance & Reliability Dashboard", layout="wide")
+st.set_page_config(page_title="Ikeja Electric Fault Clearance & Reliability Indices Dashboard", layout="wide")
 
 # -----------------------------
 # Utility functions (unchanged)
@@ -130,7 +130,7 @@ def metric_with_color(label, value_str, good):
 page = st.sidebar.radio("Select Page", ["Fault Analysis", "Reliability Indices"])
 
 # Main title + instructions (keeps original feel)
-st.title("Ikeja Electric Monthly Fault Clearance Dashboard")
+st.title("GridMetrix")
 st.markdown("Upload an Excel file with sheets '11kV Tripping Log' and 'Customer Info' to analyze fault clearance and reliability indices.")
 
 # -----------------------------
@@ -811,5 +811,5 @@ elif page == "Reliability Indices":
             {'FEEDER_NAME': k, 'ACTIVE_CUSTOMERS': v} for k, v in customers_per_feeder.items()
         ]).sort_values('FEEDER_NAME')
         st.dataframe(feeder_counts_df)
-
+st.footer("Developed By Elvis Ebenuwah for Ikeja Electric")
 # End of app
