@@ -811,5 +811,15 @@ elif page == "Reliability Indices":
             {'FEEDER_NAME': k, 'ACTIVE_CUSTOMERS': v} for k, v in customers_per_feeder.items()
         ]).sort_values('FEEDER_NAME')
         st.dataframe(feeder_counts_df)
-    st.footer("Developed By Elvis Ebenuwah for Ikeja Electric")
+
+st.markdown(
+    """
+    <hr style="margin-top:2em;margin-bottom:0.5em;">
+    <div style="text-align:center; color:gray;">
+        Developed by <b>Elvis Ebenuwah</b> ⚡
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # End of app
