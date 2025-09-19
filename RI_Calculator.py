@@ -811,5 +811,5 @@ elif page == "Reliability Indices":
             {'FEEDER_NAME': k, 'ACTIVE_CUSTOMERS': v} for k, v in customers_per_feeder.items()
         ]).sort_values('FEEDER_NAME')
         st.dataframe(feeder_counts_df)
-st.footer("Developed By Elvis Ebenuwah for Ikeja Electric")
+    st.footer("Developed By Elvis Ebenuwah for Ikeja Electric")
 # End of app
