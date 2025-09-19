@@ -24,7 +24,11 @@ components.html(
 )
 
 # Streamlit page configuration
-st.set_page_config(page_title="Ikeja Electric Fault Clearance & Reliability Indices Dashboard", layout="wide")
+st.set_page_config(page_title="GridMetrix", page_icon="⚡", layout="wide")
+
+st.title("⚡ GridMetrix")
+st.caption("Real-time Fault Analysis & Reliability Metrics Dashboard")
+
 
 # -----------------------------
 # Utility functions (unchanged)
@@ -129,8 +133,7 @@ def metric_with_color(label, value_str, good):
 # -----------------------------
 page = st.sidebar.radio("Select Page", ["Fault Analysis", "Reliability Indices"])
 
-# Main title + instructions (keeps original feel)
-st.title("GridMetrix")
+# instructions (keeps original feel)
 st.markdown("Upload an Excel file with sheets '11kV Tripping Log' and 'Customer Info' to analyze fault clearance and reliability indices.")
 
 # -----------------------------
@@ -816,10 +819,11 @@ st.markdown(
     """
     <hr style="margin-top:2em;margin-bottom:0.5em;">
     <div style="text-align:center; color:gray;">
-        Developed by <b>Elvis Ebenuwah</b> ⚡
+        Developed by <b>Elvis Ebenuwah</b> | ⚡ Powered by GridMetrix
     </div>
     """,
     unsafe_allow_html=True
 )
+
 
 # End of app
