@@ -27,7 +27,7 @@ components.html(
 st.set_page_config(page_title="GridMetrix", page_icon="⚡", layout="wide")
 
 st.title("⚡ GridMetrix")
-st.caption("Real-time Fault Analysis & Reliability Metrics Dashboard")
+st.caption(" The First Fault Analysis & Reliability Metrics Dashboard")
 
 
 # -----------------------------
